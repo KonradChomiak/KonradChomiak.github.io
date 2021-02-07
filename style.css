@@ -1,0 +1,151 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before .main {}
+
+.body {
+    background-color: #2A1F2D;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main__header {
+    color: #9BC1BC;
+    text-align: center;
+    text-shadow: 6px 6px 5px black;
+}
+
+
+
+.portfolio {}
+
+.portfolio__header {
+    color: #dbd947;
+    text-align: center;
+    text-shadow: 5px 5px 5px black
+}
+
+.about {
+    margin: 40px 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   justify-content: center;
+}
+
+.about__div {
+   width:200px;
+    background: #22134d;
+    display: flex;
+    
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px black;
+    
+}
+
+.about__paragraph {
+    color: #ffff;
+    text-align: center;
+    margin: 0;
+    font-size: 90%;
+    padding: 8px;
+    
+}
+
+.flex{
+    margin: 30px;
+}
+
+.flex__div {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex__item {
+    display: flex;
+    background-color: lightgray;
+    transition: background-color 1s;
+    border: solid #ffffff 5px;
+    margin: 3px;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 1em white;
+    padding: 3px 4px 0 0;
+}
+
+.flex__item1 {
+    display: flex;
+    background: lightgray;
+    transition: background-color 1s;
+    border: solid #ffffff 5px;
+    margin: 3px;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 1em white;
+    padding: 3px 4px 0 0;
+}
+
+.flex__item2 {
+    display: flex;
+    background: lightgray;
+    transition: background-color 1s;
+    border: solid #ffffff 5px;
+    margin: 3px;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 1em white;
+    padding: 3px 4px 0 0;
+}
+
+.flex__item:hover {
+    Background: #3D5A98;
+    transition: background-color .5s;
+}
+
+.flex__item1:hover {
+    Background: #000000;
+    transition: background-color .5s;
+}
+
+.flex__item2:hover {
+    Background: #0084BF;
+    transition: background-color .5s;
+}
+
+.pic {
+    width: 50px;
+    padding: 0 10px 0 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.pic2 {
+    width: 35px;
+    padding: 0 0 0 7px;
+    position: relative;
+}
+
+.zdjdiv {
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.mojezdj {
+    width: 100%;
+    max-width: 150px;
+    min-width: 60px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px black;
+    margin: 20px;
+}
