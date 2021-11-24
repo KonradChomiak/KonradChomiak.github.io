@@ -8,4 +8,3 @@ console.log(age);
 
 console.log(`mam na imie ${name} i mam ${age}lata`)
 
-alert('wypierdalaj')
