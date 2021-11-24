@@ -1,0 +1,199 @@
+body {
+
+    box-sizing: border-box;
+    background-color: lightgrey;
+    font-family: Georgia, serif;
+    border: 33px solid #264653;
+    border-radius: 4vw;
+}
+
+.header {
+    color: rgb(199, 55, 55);
+    margin-top: 40px;
+    text-align: center;
+    background-image: url(tlo1.jpg);
+    padding: 200px;
+    text-shadow: 3px 3px 6px black;
+}
+
+.link {
+    color: white;
+    top: 10px;
+    position: fixed;
+    text-decoration: none;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    text-shadow: 0px 0px 7px black;
+    transition: background-color 0.5s;
+
+
+}
+
+.link:hover {
+    background-color: rgb(197, 207, 106);
+}
+
+.link2 {
+    color: black;
+    text-decoration: none;
+    margin: 2px 0 2px 100px;
+    background-color: powderblue;
+    border-radius: 4px;
+    transition: background-color 0.5s;
+    padding: 11px;
+
+}
+
+.link2:hover {
+    background-color: rgb(197, 207, 106);
+
+
+}
+
+table, th, td {
+    border: 0.5px solid black;
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 500px;
+    height: 550px;
+    background-color: #f8edeb;
+    box-shadow: 0px 0px 20px 1px black;
+}
+
+.glownegowno {
+    background-color: rgb(177, 175, 175);
+}
+
+.gowno {
+    text-align: center;
+}
+
+.dupsko {
+    margin: 20px;
+
+}
+
+.description {
+    text-align: center;
+    padding-left: 140px;
+    padding-right: 140px;
+    font-size: 1em;
+
+
+}
+
+
+
+
+
+.descriptionheader {
+    min-width: 200px;
+
+}
+
+.navigation {
+    background-color: rgb(73, 128, 66);
+    margin: 30px 0 30px 0;
+    font-size: 25px;
+    height: 30px;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+    min-width: 400px;
+    border-radius: 5px;
+    
+
+}
+
+
+    .cos {
+        top: 0;
+        position: sticky;
+        box-sizing: border-box;
+    }
+
+
+
+
+
+
+.up {
+    text-decoration: none;
+    color: black;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: lightgray;
+    padding: 3px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+
+}
+
+.up:hover {
+    background-color: rgb(197, 207, 106)
+}
+
+.drivers {
+
+    margin: 20px 0 0px 20px;
+}
+
+.driversheader {
+    text-align: center;
+    margin: 30px;
+}
+
+.kubicaparagraph {
+    width: 100%;
+
+}
+
+.kubicalink {
+
+    margin: 10px 230px 5px 90px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.drivers__header {
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+.drivers__div {
+    display: flex;
+
+    justify-content: space-between;
+
+
+}
+
+.drivers__kubica {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;
+    box-shadow: 12px 10px 20px 1px black;
+
+}
+
+.drivers__max {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;
+    box-shadow: 12px 10px 20px 1px black;
+}
+
+.drivers__ham {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 120px 90px 60px 30px/30px 60px 90px 120px;
+    box-shadow: 4px 4px 4px black;
+}

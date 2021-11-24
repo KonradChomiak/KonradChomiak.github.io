@@ -1,0 +1,60 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #457b9d
+}
+
+.header {
+    color: #2a9d8f;
+    margin-top: 40px;
+    text-align: center;
+    text-shadow: 16px 6px 12px #000000;
+}
+
+
+    
+
+
+.sectionHeader {
+    color: #e9c46a;
+    font-size: 20px;
+}
+
+.diary {
+    color: #f4a261;
+    text-align: center;
+}
+
+.diaryText {
+font-size: 20px;
+    margin:20px;
+}
+
+.lorem {
+    max-width: 60%;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.navigation {
+    top: 10px;
+    position: fixed;
+    
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    background-color: #457b9d;
+    transition: background-color 1s;
+    border-radius: 5px;
+    text-shadow: 1px 1px 4px black;
+    
+    padding: 3px;
+    
+    
+
+}
+
+.link:hover {
+    background-color: rgb(197, 207, 106);
+}
