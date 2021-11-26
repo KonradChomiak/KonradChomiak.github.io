@@ -2,7 +2,7 @@ body {
 
     box-sizing: border-box;
     background-color: lightgrey;
-    font-family: Georgia, serif;
+    font-family: 'Roboto', sans-serif;
     border: 33px solid #264653;
     border-radius: 4vw;
 }
@@ -12,8 +12,10 @@ body {
     margin-top: 40px;
     text-align: center;
     background-image: url(tlo1.jpg);
-    padding: 200px;
+    height: 400px;
     text-shadow: 3px 3px 6px black;
+    display: flex;
+    justify-content: center;
 }
 
 .backward {
@@ -66,7 +68,7 @@ table, th, td {
 .description {
     text-align: center;
 
-    font-size: 1rem;
+    font-size: calc(12px + 0.5vw)
 
 
 }
@@ -76,12 +78,14 @@ table, th, td {
 
 
 .descriptionheader {
+    font-size: calc(20px + 2vw);
+
     min-width: 200px;
 
 }
 
 .navigationsticky {
-    background-color:#2a9d8f;
+    background-color: #2a9d8f;
     margin: 30px 0 30px 0;
     font-size: 25px;
     height: 30px;
@@ -90,9 +94,9 @@ table, th, td {
     width: 100%;
     min-width: 386px;
     border-radius: 5px;
-    
-    
-  
+
+
+
 
 }
 
@@ -101,15 +105,14 @@ table, th, td {
     top: 0;
     position: sticky;
     box-sizing: border-box;
-  
-    
+
 }
 
 
 .link2 {
     color: black;
     text-decoration: none;
-    
+
     background-color: powderblue;
     border-radius: 4px;
     transition: background-color 0.5s;

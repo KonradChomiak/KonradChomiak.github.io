@@ -11,7 +11,7 @@ body {
 }
 
 
-    
+
 
 
 .sectionHeader {
@@ -25,21 +25,21 @@ body {
 }
 
 .diaryText {
-font-size: 20px;
-    margin:20px;
+    font-size: calc(12px + 0.5vw);
+    margin: 20px;
 }
 
 .lorem {
     max-width: 60%;
     margin-right: 20px;
     text-align: center;
-    font-size: 1rem;
+    font-size: calc(12px + 0.5vw);
 }
 
 .navigation {
     top: 10px;
     position: fixed;
-    
+
 }
 
 .link {
@@ -49,10 +49,10 @@ font-size: 20px;
     transition: background-color 1s;
     border-radius: 5px;
     text-shadow: 1px 1px 4px black;
-    
+
     padding: 3px;
-    
-    
+
+
 
 }
 
