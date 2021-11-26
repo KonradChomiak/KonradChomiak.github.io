@@ -65,24 +65,23 @@ table, th, td {
     box-shadow: 0px 0px 20px 1px black;
 }
 
-.glownegowno {
+.Tablepoint {
     background-color: rgb(177, 175, 175);
 }
 
-.gowno {
+.TableItem {
     text-align: center;
 }
 
-.dupsko {
+.tableSection {
     margin: 20px;
 
 }
 
 .description {
     text-align: center;
-    padding-left: 140px;
-    padding-right: 140px;
-    font-size: 1em;
+   
+    font-size: 1rem;
 
 
 }
