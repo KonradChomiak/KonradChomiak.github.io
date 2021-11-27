@@ -1,7 +1,7 @@
 body {
 
     box-sizing: border-box;
-    background-color: lightgrey;
+    background-color: #fefae0;
     font-family: 'Roboto', sans-serif;
     
    
@@ -11,7 +11,7 @@ body {
     color: rgb(199, 55, 55);
     margin-top: 40px;
     text-align: center;
-    background-image: url(tlo1.jpg);
+    background-image: url(tlo2.jpg);
     height: 400px;
     text-shadow: 3px 3px 6px black;
     display: flex;
@@ -97,8 +97,8 @@ table, th, td {
 
 .navigation__div {
     width: 100%;
-    background-color: #2a9d8f;
-    font-size: calc(10px + 1.3vw);
+    background-color: #3e1f47;
+    font-size: calc(8px + 1vw);
     border-radius: 4px;
 
 }
@@ -109,7 +109,7 @@ table, th, td {
     color: black;
     text-decoration: none;
     margin: 2px 10px;
-    background-color: powderblue;
+    background-color: #e85d04;
     border-radius: 4px;
     transition: background-color 0.5s;
     padding: 10px;
@@ -118,7 +118,7 @@ table, th, td {
 }
 
 .link2:hover {
-    background-color: rgb(197, 207, 106);
+    background-color:#faa307;
 
 
 }
