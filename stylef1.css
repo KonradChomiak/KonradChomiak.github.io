@@ -3,8 +3,8 @@ body {
     box-sizing: border-box;
     background-color: lightgrey;
     font-family: 'Roboto', sans-serif;
-    border: 33px solid #264653;
-    border-radius: 4vw;
+    
+   
 }
 
 .header {
@@ -81,7 +81,7 @@ table, th, td {
 
 }
 
-.navigationsticky {}
+
 
 
 .Navigation {
