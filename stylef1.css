@@ -160,6 +160,7 @@ table, th, td {
     padding: 3px;
     border-radius: 5px;
     transition: background-color 0.5s;
+    z-index: 3;
 
 }
 
