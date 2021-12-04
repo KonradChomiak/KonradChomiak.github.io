@@ -10,7 +10,8 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f6f4d2
+    background: rgb(2, 0, 36);
+    background: linear-gradient(198deg, rgba(2, 0, 36, 0.3673670151654411) 0%, rgba(208, 202, 167, 1) 25%, rgba(0, 212, 255, 0.16288522244835435) 100%);
 }
 
 .header {
