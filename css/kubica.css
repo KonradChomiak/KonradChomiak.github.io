@@ -1,7 +1,7 @@
 body {
     box-sizing: border-box;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(198deg, rgba(2, 0, 36, 0.3673670151654411) 0%, rgba(208, 202, 167, 1) 25%, rgba(0, 212, 255, 0.16288522244835435) 100%);
+    background: rgb(147,22,76);
+background: radial-gradient(circle, rgba(147,22,76,0.6838936258096988) 25%, rgba(64,143,236,1) 62%);
     font-family: 'Roboto', sans-serif;
 }
 
