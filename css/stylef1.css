@@ -28,7 +28,8 @@ body {
 
 
 .header__pic {
-    width: 95%;
+    width: 70%;
+    box-shadow: 1px 1px 78px 1px black;
 }
 
 .description {
@@ -38,7 +39,7 @@ body {
 }
 
 .descriptionheader {
-    font-size: calc(5px + 3vw);
+    font-size: calc(2px + 3vw);
     margin: 5px auto;
 
 }
@@ -102,14 +103,20 @@ table, th, td {
 
 
 
+.color__button {
+    background-color: #f4a261;
+    border-radius: 4px;
+    border:8px solid #f4a261;
+    margin: 10px;
+    box-shadow: black 1px 1px 20px 0px;
+}
 
 
 
 
 
 
-
-.Navigation {
+.navigation {
     top: 0px;
     position: sticky;
     box-sizing: border-box;
@@ -135,7 +142,7 @@ table, th, td {
     color: black;
     text-decoration: none;
     margin: 2px 10px;
-    background-color: #e85d04;
+    background-color: #f4a261;
     border-radius: 4px;
     transition: background-color 0.5s;
     padding: 10px;
@@ -242,4 +249,73 @@ table, th, td {
     text-align: center;
     margin: 70px 0 50px 0;
     text-shadow: 0 0 20px black;
+}
+
+.header__button {
+
+    width: 100%;
+    max-width: 100px;
+    background-color: #f4a261;
+    border-radius: 4px;
+    border:5px solid #f4a261;
+    margin: 5px;
+    box-shadow: black 1px 1px 20px 0px;
+}
+
+.buttondiv {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.header__title--green {
+    color: green;
+}
+
+.header__title--yellow {
+    color: yellow;
+}
+
+.header__title--white {
+    color: white;
+}
+
+.header__title--blue {
+    color: blue;
+}
+
+.header__title--black {
+    color: black;
+}
+
+.header__title--suprise {
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(214, 7, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.color__header {
+    text-align: center;
+    text-shadow: 0 0 20px black;
+}
+
+ .color__div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+ }
+
+
+@media (max-width: 640px) {
+    .navigation__visible {
+        display: flex;
+    }
 }

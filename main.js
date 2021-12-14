@@ -33,3 +33,5 @@ else  {
 
 const rukonrad = (age > 23) ? 'masz wiecej lat niz konrader' : 'masz mniej lat niz kontal';
 console.log(rukonrad);
+
+
