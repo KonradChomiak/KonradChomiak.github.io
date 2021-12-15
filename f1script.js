@@ -82,3 +82,9 @@ suprisebutton.addEventListener('click', (e) => {
 
 
 
+const menubutton = document.querySelector('.navigation__button--js');
+menubutton.addEventListener('click', (e) => {
+    const header = document.querySelector('.navigation__visible--js')
+
+    header.classList.toggle('navigation__visible')
+});
