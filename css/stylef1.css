@@ -412,4 +412,7 @@ table, th, td {
         margin: 60px;
     }
     
+    .descriptionheader {
+        font-size: 20px;
+    }
 }
