@@ -409,5 +409,7 @@ table, th, td {
 
     .description {
         font-size: 20px;
+        margin: 60px;
     }
+    
 }
