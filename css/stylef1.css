@@ -29,18 +29,21 @@ body {
 
 .header__pic {
     width: 70%;
+    min-width: 400px;
     box-shadow: 1px 1px 78px 1px black;
     border-radius: 40px;
 }
 
 .description {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     margin: 50px 0 50px 0;
 }
 
 .description__paragraph {
-    margin: 10px 30px;
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .descriptionheader {
@@ -141,7 +144,6 @@ table, th, td {
     color: black;
     text-decoration: none;
     margin: 2px 0 2px 70px;
-    
     background-color: #f4a261;
     border-radius: 4px;
     transition: background-color 0.5s;
@@ -216,7 +218,7 @@ table, th, td {
 
 
 .drivers__items {
-    margin: 10px 20px;
+    margin: 10px 30px;
 }
 
 .drivers__kubica {
@@ -264,6 +266,7 @@ table, th, td {
 }
 
 .section__header {
+    font-size: 26px;
     text-align: center;
     margin: 70px 0 50px 0;
     text-shadow: 0 0 20px black;
@@ -351,13 +354,38 @@ table, th, td {
 }
 
 .color__button {
-    opacity: 1;
-    max-width: 150px;
-    background-color: #f4a261;
-    border-radius: 4px;
-    border: 8px solid #f4a261;
-    margin: 10px;
-    box-shadow: black 1px 1px 20px 0px;
+    width: 20px;
+    height: 20px;
+    margin: 10px 3px;
+}
+
+.color__button--green {
+    background-color: green;
+
+}
+
+.color__button--blue {
+    background-color: blue;
+
+}
+
+.color__button--black {
+    background-color: black;
+}
+
+.color__button--yellow {
+    background-color: yellow;
+
+}
+
+.color__button--white {
+    background-color: white;
+}
+
+.color__button--suprise {
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(214, 7, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navigation__visible {
@@ -366,7 +394,7 @@ table, th, td {
 
 
 @media (max-width: 640px) {
-    
+
 
     .table {
         margin-left: auto;
@@ -379,4 +407,7 @@ table, th, td {
         box-shadow: 0px 0px 20px 1px black;
     }
 
+    .description {
+        font-size: 20px;
+    }
 }
