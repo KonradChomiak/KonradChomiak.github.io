@@ -262,21 +262,27 @@
 
     .tableSection {
         padding: 40px 10px;
+        width: 100%;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .table {
-        min-width: 600px;
-        /* Ensure content doesn't squash too much */
+        min-width: 500px;
+        font-size: 0.9rem;
+    }
+
+    .TableItem td {
+        padding: 15px 10px;
     }
 
     .drivers {
-        padding: 40px 20px;
+        padding: 40px 15px;
     }
 
     .drivers__div {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
     }
 
     .section__header,
@@ -300,7 +306,19 @@
 
     .color__div {
         flex-wrap: wrap;
-        padding: 0 20px;
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .color__button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .drivers__div {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
     }
 }
 
