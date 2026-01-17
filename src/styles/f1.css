@@ -304,6 +304,50 @@
         font-size: 1.75rem;
     }
 
+    .tableSection {
+        padding: 40px 15px;
+        overflow-x: visible;
+    }
+
+    .table {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .Tablepoint th {
+        padding: 10px 5px;
+        font-size: 0.7rem;
+    }
+
+    .TableItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg-card);
+        border-radius: 12px;
+        border: 1px solid var(--border-glass);
+        margin-bottom: 8px;
+    }
+
+    .TableItem td {
+        display: block;
+        background: none !important;
+        border: none !important;
+        padding: 15px !important;
+        width: auto !important;
+    }
+
+    .TableItem td:first-child {
+        font-weight: 500;
+        color: var(--text-primary);
+        text-align: left;
+    }
+
+    .TableItem td:last-child {
+        text-align: right;
+        font-size: 1.1rem;
+    }
+
     .color__div {
         flex-wrap: wrap;
         padding: 0 10px;
@@ -317,8 +361,8 @@
 
     .drivers__div {
         grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
+        max-width: 100%;
+        margin: 0;
     }
 }
 
