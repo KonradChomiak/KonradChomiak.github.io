@@ -118,6 +118,10 @@
     filter: saturate(0) brightness(0.4);
 }
 
+.description__paragraph {
+    margin: 30px;
+}
+
 .descriptionheader {
     position: relative;
     z-index: 2;
@@ -302,23 +306,25 @@
         left: 15px;
     }
 
-    .link2 {
-        font-size: 1.75rem;
-    }
-
     .tableSection {
         padding: 40px 15px;
-        overflow-x: visible;
-    }
-
-    .table {
-        min-width: 0;
         width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
     }
 
-    .Tablepoint th {
-        padding: 10px 5px;
-        font-size: 0.7rem;
+    .table,
+    .bodytable,
+    .Tablepoint,
+    .TableItem {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Tablepoint {
+        display: none;
+        /* Hide headers on very small screens for card layout */
     }
 
     .TableItem {
@@ -328,26 +334,29 @@
         background: var(--bg-card);
         border-radius: 12px;
         border: 1px solid var(--border-glass);
-        margin-bottom: 8px;
+        margin-bottom: 12px;
+        padding: 5px 10px;
+        width: 100%;
     }
 
     .TableItem td {
         display: block;
         background: none !important;
         border: none !important;
-        padding: 15px !important;
+        padding: 10px !important;
         width: auto !important;
-    }
-
-    .TableItem td:first-child {
-        font-weight: 500;
-        color: var(--text-primary);
-        text-align: left;
+        max-width: 60%;
+        /* Prevent long team names from pushing points out */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .TableItem td:last-child {
         text-align: right;
         font-size: 1.1rem;
+        font-weight: 800;
+        max-width: 30%;
     }
 
     .color__div {
@@ -362,9 +371,16 @@
     }
 
     .drivers__div {
-        grid-template-columns: 1fr;
-        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .drivers__items {
+        width: 100%;
         margin: 0;
+        box-sizing: border-box;
     }
 }
 
