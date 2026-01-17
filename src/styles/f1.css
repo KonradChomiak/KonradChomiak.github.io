@@ -261,14 +261,16 @@
     }
 
     .tableSection {
-        padding: 40px 10px;
+        padding: 40px 15px;
         width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        overflow-x: hidden;
+        /* Remove horizontal scroll for tablets too */
     }
 
     .table {
-        min-width: 500px;
+        min-width: 0;
+        width: 100%;
         font-size: 0.9rem;
     }
 
