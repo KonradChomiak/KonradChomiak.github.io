@@ -89,10 +89,11 @@ export const SOCIAL_LINKS = [
         className: 'buttons__linkedin'
     },
     {
+        id: 'github',
         name: 'github',
         url: 'https://github.com/KonradChomiak',
         icon: 'assets/gitmark64.png',
-        className: 'buttons__git'
+        className: 'buttons__github'
     },
 ]
 

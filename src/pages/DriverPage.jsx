@@ -1,19 +1,28 @@
 import { useMemo, memo } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { getDriverById } from '../data/constants'
 import '../styles/driver.css'
 
 // Memoized external link component
-const ExternalLink = memo(function ExternalLink({ href, children }) {
+const ExternalLink = memo(function ExternalLink({ href, children, index }) {
     return (
-        <a
-            href={href}
-            className="links"
-            target="_blank"
-            rel="noopener noreferrer"
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 + index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
         >
-            {children}
-        </a>
+            <a
+                href={href}
+                className="links"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {children}
+            </a>
+        </motion.div>
     )
 })
 
@@ -22,7 +31,12 @@ const FactsList = memo(function FactsList({ facts, currentInfo }) {
     if (facts.length === 0) return null
 
     return (
-        <div className="list">
+        <motion.div
+            className="list"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+        >
             <ul className="listul">
                 {facts.map((fact, i) => (
                     <li key={i}>{fact}</li>
@@ -35,7 +49,7 @@ const FactsList = memo(function FactsList({ facts, currentInfo }) {
                     </ol>
                 )}
             </ul>
-        </div>
+        </motion.div>
     )
 })
 
@@ -49,7 +63,6 @@ function DriverPage() {
         return (
             <main className="driver-page">
                 <h1>Kierowca nie znaleziony</h1>
-                <Link to="/f1" className="nav">Powrót</Link>
             </main>
         )
     }
@@ -58,36 +71,61 @@ function DriverPage() {
 
     return (
         <main className="driver-page">
-            <header>
-                <h1 className="header">{displayName}</h1>
+            <header className="header">
+                <motion.h1
+                    initial={{ opacity: 0, scale: 1.2 }}
+                    animate={{ opacity: 0.1, scale: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    {displayName}
+                </motion.h1>
             </header>
 
             <section className="driver-content">
-                <h2 className="sectionheader">{subtitle}</h2>
+                <motion.h2
+                    className="sectionheader"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                >
+                    {subtitle}
+                </motion.h2>
 
-                <img
+                <motion.img
                     src={image}
                     alt={`zdjęcie przedstawiające ${displayName}`}
                     className="driver-pic"
-                    loading="eager"
+                    initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ type: "spring", damping: 20, stiffness: 100 }}
                 />
 
-                <p className="driver-paragraph">{bio}</p>
+                <motion.p
+                    className="driver-paragraph"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                >
+                    {bio}
+                </motion.p>
 
                 <FactsList facts={facts} currentInfo={currentInfo} />
-
-                <p>
-                    <Link to="/f1" className="nav">Powrót</Link>
-                </p>
             </section>
 
             <footer>
                 <section className="driver-links">
-                    <p className="links-header">Przydatne linki</p>
+                    <motion.p
+                        className="links-header"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.8 }}
+                    >
+                        Przydatne linki
+                    </motion.p>
                     <nav className="links-nav">
-                        <ExternalLink href={links.wikipedia}>Wikipedia</ExternalLink>
-                        <ExternalLink href={links.instagram}>Instagram</ExternalLink>
-                        <ExternalLink href={links.facebook}>Facebook</ExternalLink>
+                        <ExternalLink index={0} href={driver.links.wikipedia}>Wikipedia</ExternalLink>
+                        <ExternalLink index={1} href={driver.links.instagram}>Instagram</ExternalLink>
+                        <ExternalLink index={2} href={driver.links.facebook}>Facebook</ExternalLink>
                     </nav>
                 </section>
             </footer>

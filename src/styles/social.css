@@ -1,34 +1,86 @@
-/* Social links styles */
+/* Social Links - Modernized & Fixed */
 
 .buttons {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 50px;
-    width: 20vw;
-    min-width: 200px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 10px solid yellowgreen;
-    padding-bottom: 20px;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 0;
+    margin-top: 100px;
+    border-top: 1px solid var(--border-glass);
 }
 
-.buttons__facebook:hover,
-.buttons__linkedin:hover,
-.buttons__git:hover {
-    opacity: 0.8;
+.buttons__facebook a,
+.buttons__linkedin a,
+.buttons__github a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-glass);
+    transition: all 0.3s var(--transition);
+    overflow: hidden;
+}
+
+.buttons__facebook a:hover {
+    background: #1877f2;
+    transform: translateY(-5px);
+    border-color: #1877f2;
+}
+
+.buttons__linkedin a:hover {
+    background: #0077b5;
+    transform: translateY(-5px);
+    border-color: #0077b5;
+}
+
+.buttons__github a:hover {
+    background: #333;
+    transform: translateY(-5px);
+    border-color: #666;
 }
 
 .facebookpic,
-.gitpic,
-.linkedinpic {
-    width: 50px;
-    height: auto;
+.linkedinpic,
+.githubpic {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    transition: all 0.3s var(--transition);
+}
+
+/* Specific fix for images that are dark/black on a dark background */
+/* We only want to invert silhouettes, not brand logos with internal details */
+.githubpic {
+    filter: invert(1);
+    opacity: 0.7;
 }
 
 @media (max-width: 768px) {
     .buttons {
-        width: 60vw;
+        gap: 20px;
+        padding: 40px 0;
+        margin-top: 60px;
     }
+
+    .buttons__facebook a,
+    .buttons__linkedin a,
+    .buttons__github a {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.facebookpic,
+.linkedinpic {
+    /* Subtle grayscale to make them fit the theme better when not hovered */
+    filter: grayscale(0.5);
+}
+
+.buttons a:hover img {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.1);
 }

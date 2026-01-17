@@ -1,5 +1,10 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import PageTransition from './components/PageTransition'
+import ScrollProgress from './components/ScrollProgress'
+import BackToTop from './components/BackToTop'
+import Header from './components/Header'
 
 // Lazy load pages for better initial bundle size
 const HomePage = lazy(() => import('./pages/HomePage'))
@@ -14,13 +19,41 @@ const PageLoader = () => (
 )
 
 function App() {
+    const location = useLocation()
+
     return (
         <Suspense fallback={<PageLoader />}>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/f1" element={<F1Page />} />
-                <Route path="/driver/:name" element={<DriverPage />} />
-            </Routes>
+            <ScrollProgress />
+            <BackToTop />
+            <Header />
+            <AnimatePresence mode="wait">
+                <Routes location={location} key={location.pathname}>
+                    <Route
+                        path="/"
+                        element={
+                            <PageTransition>
+                                <HomePage />
+                            </PageTransition>
+                        }
+                    />
+                    <Route
+                        path="/f1"
+                        element={
+                            <PageTransition>
+                                <F1Page />
+                            </PageTransition>
+                        }
+                    />
+                    <Route
+                        path="/driver/:name"
+                        element={
+                            <PageTransition>
+                                <DriverPage />
+                            </PageTransition>
+                        }
+                    />
+                </Routes>
+            </AnimatePresence>
         </Suspense>
     )
 }

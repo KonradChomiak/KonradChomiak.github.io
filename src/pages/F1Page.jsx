@@ -1,104 +1,109 @@
 import { memo, useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { TEAMS_DATA, DRIVERS_DATA, COLOR_OPTIONS } from '../data/constants'
 import '../styles/f1.css'
 
 // Memoized table row component
-const TeamRow = memo(function TeamRow({ name, points }) {
+const TeamRow = memo(function TeamRow({ name, points, index }) {
     return (
-        <tr className="TableItem">
+        <motion.tr
+            className="TableItem"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.05 }}
+        >
             <td>{name}</td>
             <td>{points}</td>
-        </tr>
+        </motion.tr>
     )
 })
 
 // Memoized driver card component
-const DriverCard = memo(function DriverCard({ id, displayName, thumbnail }) {
+const DriverCard = memo(function DriverCard({ id, displayName, thumbnail, index }) {
     return (
-        <div className="drivers__items">
+        <motion.div
+            className="drivers__items"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -10, scale: 1.02 }}
+        >
             <h3 className="picheader">{displayName}</h3>
             <Link to={`/driver/${id}`}>
-                <img
+                <motion.img
                     src={thumbnail}
                     alt={`zdjęcie przedstawiające ${displayName}`}
                     className="drivers__pic"
                     loading="lazy"
                 />
             </Link>
-        </div>
+        </motion.div>
     )
 })
 
 // Memoized color button component
 const ColorButton = memo(function ColorButton({ name, color, onClick }) {
     return (
-        <button
+        <motion.button
             className={`color__button color__button--${name}`}
             onClick={onClick}
             style={{ backgroundColor: color }}
             aria-label={`Zmień kolor na ${name}`}
+            whileHover={{ scale: 1.2, rotate: 8 }}
+            whileTap={{ scale: 0.9 }}
         />
     )
 })
 
 function F1Page() {
     const [headerColor, setHeaderColor] = useState('#fff')
-    const [navVisible, setNavVisible] = useState(false)
 
-    // Memoized toggle function - won't be recreated on each render
-    const toggleNav = useCallback(() => {
-        setNavVisible(prev => !prev)
-    }, [])
-
-    // Memoized navigation classes
-    const navClasses = useMemo(() =>
-        `navigation ${navVisible ? 'navigation__visible' : ''}`,
-        [navVisible]
-    )
+    const { scrollY } = useScroll()
+    const titleY = useTransform(scrollY, [0, 500], [0, 150])
+    const imageY = useTransform(scrollY, [0, 500], [0, 100])
 
     return (
         <>
-            <button
-                className="navigation__button"
-                onClick={toggleNav}
-                aria-label="Toggle navigation"
-                aria-expanded={navVisible}
-            >
-                ≡
-            </button>
-
-            <nav className={navClasses} role="navigation">
-                <div className="navigation__div">
-                    <Link to="/" className="link2">Powrót</Link>
-                    <a href="#table" className="link2">Punktacja</a>
-                    <a href="#Formula" className="link2">Kierowcy</a>
-                </div>
-            </nav>
-
             <main id="up">
                 <div className="header__div">
                     <header className="header">
-                        <img
+                        <motion.img
                             src="assets/tlo2.jpg"
                             alt="tło"
                             className="header__pic"
                             loading="eager"
+                            style={{ y: imageY }}
+                            initial={{ scale: 1.2 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 1.5 }}
                         />
                         <div className="description__div">
-                            <h1
+                            <motion.h1
                                 className="descriptionheader"
-                                style={{ color: headerColor }}
+                                style={{ color: headerColor, y: titleY }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.8 }}
                             >
                                 Formula 1™ - Wszystko co musisz wiedzieć
-                            </h1>
+                            </motion.h1>
                         </div>
                     </header>
                 </div>
             </main>
 
             <section className="color">
-                <h2 className="color__header">Zmień kolor nagłówka</h2>
+                <motion.h2
+                    className="color__header"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                >
+                    Zmień kolor nagłówka
+                </motion.h2>
                 <div className="color__div">
                     {COLOR_OPTIONS.map(({ name, color }) => (
                         <ColorButton
@@ -111,7 +116,12 @@ function F1Page() {
                 </div>
             </section>
 
-            <section className="description">
+            <motion.section
+                className="description"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+            >
                 <p className="description__paragraph">
                     Bolidy Formuły 1 to fizyczna reprezentacja najnowszych osiągnięć w dziedzinie
                     motoryzacji. Już samo oglądanie wyścigów dostarcza odpowiedniej dozy emocji,
@@ -119,10 +129,17 @@ function F1Page() {
                     Wynajdywanie innowacji, testy, zmagania inżynierów, aby dodać bolidowi zdolność
                     jazdy chociaż o 1 km/h szybciej.
                 </p>
-            </section>
+            </motion.section>
 
             <section>
-                <h3 className="section__header">Punktacja zespołów Sezon 2021</h3>
+                <motion.h3
+                    className="section__header"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                >
+                    Punktacja zespołów Sezon 2021
+                </motion.h3>
             </section>
 
             <section className="tableSection" id="table">
@@ -134,9 +151,10 @@ function F1Page() {
                         </tr>
                     </thead>
                     <tbody className="bodytable">
-                        {TEAMS_DATA.map(team => (
+                        {TEAMS_DATA.map((team, index) => (
                             <TeamRow
                                 key={team.name}
+                                index={index}
                                 name={team.name}
                                 points={team.points}
                             />
@@ -146,23 +164,26 @@ function F1Page() {
             </section>
 
             <section className="drivers">
-                <h2 className="drivers__header" id="Formula">Kierowcy F1</h2>
+                <motion.h2
+                    className="drivers__header"
+                    id="Formula"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                >
+                    Kierowcy F1
+                </motion.h2>
                 <div className="drivers__div">
-                    {DRIVERS_DATA.map(driver => (
+                    {DRIVERS_DATA.map((driver, index) => (
                         <DriverCard
                             key={driver.id}
+                            index={index}
                             id={driver.id}
                             displayName={driver.displayName}
                             thumbnail={driver.thumbnail}
                         />
                     ))}
                 </div>
-            </section>
-
-            <section className="navigation__up">
-                <a href="#up" className="up" aria-label="Wróć na górę strony">
-                    Na górę
-                </a>
             </section>
         </>
     )
