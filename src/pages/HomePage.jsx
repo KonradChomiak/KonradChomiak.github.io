@@ -10,8 +10,8 @@ const DiaryEntry = memo(function DiaryEntry({ title, content, index }) {
     return (
         <motion.div
             className="diaryText"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
         >
@@ -26,7 +26,7 @@ function HomePage() {
     const picScale = useTransform(scrollY, [0, 500], [1, 1.1])
 
     return (
-        <main>
+        <main className="container">
             <motion.header
                 className="header"
                 style={{ y: headerY }}
@@ -58,16 +58,15 @@ function HomePage() {
                 </p>
             </motion.section>
 
-            <section>
+            <section className="section">
                 <motion.h2
                     className="diary"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                 >
-                    Pamiętnik
+                    Mój Pamiętnik
                 </motion.h2>
-
                 {DIARY_ENTRIES.map((entry, index) => (
                     <DiaryEntry
                         key={index}
@@ -76,31 +75,29 @@ function HomePage() {
                         content={entry.content}
                     />
                 ))}
+            </section>
 
-                <motion.h3
+            <section className="section">
+                <motion.h2
                     className="lorem-header"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    Lorem ipsum
-                </motion.h3>
-
+                    Trochę więcej o mnie
+                </motion.h2>
                 <motion.p
                     className="lorem"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quo dolores ex!
-                    Accusamus aliquam eveniet porro eaque ipsam ea, voluptates officia dolorum, odio recusandae,
-                    nostrum ut minima possimus quaerat maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum, quae velit et suscipit totam explicabo autem optio iste distinctio quas! Facilis quis
-                    tenetur mollitia modi expedita commodi odit molestiae similique. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Quaerat iste amet molestias, cum incidunt minus voluptates tenetur at mollitia.
-                    Doloremque architecto velit similique id rem, possimus culpa voluptate maiores eos! Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Iure voluptate, commodi recusandae rem nemo quasi, delectus harum,
-                    fuga similique nostrum sunt voluptatum! Voluptates molestias et iure temporibus optio ipsa recusandae!
+                    Jestem pasjonatem technologii i sportów motorowych. Moja przygoda z programowaniem
+                    zaczęła się od chęci stworzenia czegoś własnego, co łączyłoby estetykę z funkcjonalnością.
+                    W moich projektach stawiam na nowoczesny design, płynne animacje i dbałość o detale.
+                    Poza kodowaniem, z ogromnym zainteresowaniem śledzę każdy wyścig Formuły 1,
+                    analizując strategie zespołów i osiągi kierowców. To właśnie ta precyzja i dążenie
+                    do perfekcji w F1 inspirują mnie do ciągłego doskonalenia moich umiejętności technicznych.
                 </motion.p>
             </section>
 

@@ -24,9 +24,12 @@
 }
 
 .section {
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -35,6 +38,8 @@
     height: 200px;
     object-fit: cover;
     margin: 0 auto 40px;
+    display: block;
+    /* Better centering */
     border-radius: 50%;
     border: 4px solid var(--accent-primary);
     box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
@@ -80,13 +85,15 @@
 }
 
 .diaryText {
+    width: 100%;
     max-width: 800px;
-    margin: 20px 30px;
+    margin: 20px auto;
     padding: 30px;
     background: var(--bg-card);
     border-radius: 20px;
     border: 1px solid var(--border-glass);
-    text-align: left;
+    text-align: center;
+    /* Centering text as well */
     font-size: 1.1rem;
     color: var(--text-secondary);
 }
@@ -106,19 +113,21 @@
 }
 
 .lorem {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto 100px;
     color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.8;
-    column-count: 2;
-    column-gap: 40px;
-    text-align: justify;
+    column-count: 1;
+    /* Switching to 1 column for better centering feel */
+    text-align: center;
 }
 
 @media (max-width: 768px) {
     .header {
-        padding: 60px 20px 30px;
+        padding: 60px 0 30px;
+        /* Removed side padding, handled by container */
     }
 
     .diary {

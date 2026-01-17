@@ -162,14 +162,14 @@
 
 /* Points Table */
 .tableSection {
-    padding: 80px 20px;
+    padding: 80px 0;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .section__header {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin: 40px 0;
     text-align: center;
 }
 
@@ -181,7 +181,7 @@
 
 .Tablepoint th {
     padding: 20px;
-    text-align: left;
+    text-align: center;
     color: var(--text-muted);
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -210,7 +210,7 @@
 
 /* Driver Grid */
 .drivers {
-    padding: 80px 20px;
+    padding: 80px 0;
     max-width: 1200px;
     margin: 0 auto;
 }

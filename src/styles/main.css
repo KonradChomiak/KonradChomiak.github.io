@@ -59,6 +59,26 @@ body {
     box-shadow: var(--shadow-main);
 }
 
+/* Global Container for consistent centering */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
 /* Page loader for lazy-loaded components */
 .page-loader {
     display: flex;
