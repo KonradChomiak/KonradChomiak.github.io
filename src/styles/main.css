@@ -1,0 +1,33 @@
+/* Main styles for homepage - converted from style.css */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(198deg, rgba(2, 0, 36, 0.37) 0%, rgba(208, 202, 167, 1) 25%, rgba(0, 212, 255, 0.16) 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* Page loader for lazy-loaded components */
+.page-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    color: #2a9d8f;
+}

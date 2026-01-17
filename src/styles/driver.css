@@ -1,0 +1,139 @@
+/* Driver page styles - combined from kubica.css, ham.css, max.css */
+
+.driver-page {
+    min-height: 100vh;
+    background: rgb(147, 22, 76);
+    background: radial-gradient(circle, rgba(147, 22, 76, 0.68) 25%, rgba(64, 143, 236, 1) 62%);
+    padding-bottom: 40px;
+}
+
+.driver-page .header {
+    width: 100%;
+    color: #e63946;
+    text-align: center;
+    padding: 20px 0 0 0;
+    height: auto;
+    text-shadow: -1px 1px 11px #8b8989;
+    border-radius: 50px 20px;
+    margin-top: 40px;
+    font-size: calc(20px + 2vw);
+}
+
+.driver-content {
+    padding: 20px;
+}
+
+.sectionheader {
+    text-align: center;
+    width: 100%;
+    font-size: calc(16px + 1vw);
+    margin-bottom: 30px;
+}
+
+.driver-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    max-width: 640px;
+    min-width: 120px;
+    height: auto;
+    border-radius: 30% 70% 70% 30%/30% 50% 70% 70%;
+    box-shadow: 12px 10px 20px 1px black;
+}
+
+.driver-paragraph {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+.listul {
+    font-size: 19px;
+}
+
+.listul li {
+    margin: 8px 0;
+}
+
+.listul ol {
+    margin-top: 10px;
+}
+
+.nav {
+    color: white;
+    top: 10px;
+    left: 10px;
+    position: fixed;
+    text-decoration: none;
+    background-color: #e85d04;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-shadow: 0px 0px 7px black;
+    transition: background-color 0.5s;
+    z-index: 10;
+}
+
+.nav:hover {
+    background-color: #faa307;
+}
+
+/* Footer links */
+.driver-links {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.links-header {
+    width: fit-content;
+    font-size: calc(12px + 0.9vw);
+    background-color: #3e1f47;
+    border-radius: 6px;
+    margin-left: 30px;
+    min-width: 160px;
+    color: white;
+    padding: 10px 20px;
+}
+
+.links {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.links:hover {
+    color: #e63946;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .driver-pic {
+        width: 70%;
+    }
+
+    .driver-paragraph {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .links-header {
+        margin-left: 10px;
+    }
+}
+
+.links-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 30px;
+}

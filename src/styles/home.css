@@ -1,18 +1,4 @@
-html {
-    box-sizing: border-box;
-}
-
-*, *:before *:after {
-    box-sizing: inherit;
-}
-
-
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(198deg, rgba(2, 0, 36, 0.3673670151654411) 0%, rgba(208, 202, 167, 1) 25%, rgba(0, 212, 255, 0.16288522244835435) 100%);
-}
+/* Home page styles - converted from style.css */
 
 .header {
     color: #2a9d8f;
@@ -21,22 +7,16 @@ body {
     font-size: calc(5px + 2vw);
 }
 
-
-
-
-
 .sectionHeader {
     color: #f25c54;
     font-size: calc(3px + 2vw);
     text-align: center;
-
 }
 
 .diary {
     color: #f4a261;
     text-align: center;
     font-size: calc(5px + 2vw);
-
 }
 
 .diaryText {
@@ -46,7 +26,6 @@ body {
     margin-right: auto;
     font-size: calc(12px + 0.5vw);
     text-align: center;
-
 }
 
 .lorem {
@@ -62,7 +41,6 @@ body {
     font-size: calc(7px + 1vw);
     text-align: center;
     margin: 50px 0;
-
 }
 
 .link {
@@ -73,17 +51,14 @@ body {
     border-radius: 5px;
     text-shadow: 1px 1px 4px black;
     text-align: center;
-    padding: 3px;
-    margin:5px;
-
-
-
+    padding: 8px 16px;
+    margin: 5px;
+    display: inline-block;
 }
 
 .link:hover {
     background-color: rgb(197, 207, 106);
 }
-
 
 .autor__pic {
     width: 20%;
@@ -93,32 +68,26 @@ body {
     margin-right: auto;
     border-radius: 30% 70% 70% 30%/30% 50% 70% 70%;
     box-shadow: 1px 4px 20px 6px yellowgreen;
-
-}
-
-.buttons {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 50px;
-    width: 20vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 10px solid yellowgreen;
-}
- .buttons__facebook:hover, .buttons__linkedin:hover, .buttons__git:hover {
-    opacity: 0.8;
-}
-
-
-.facebookpic, .gitpic, .linkedinpic {
-    width: 6vw;
-    
-
 }
 
 .test {
     text-decoration: none;
-    color:black;
+    color: black;
+}
+
+.section {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .diaryText,
+    .lorem {
+        max-width: 90vw;
+    }
+}
+
+.lorem-header {
+    text-align: center;
 }

@@ -1,0 +1,34 @@
+/* Social links styles */
+
+.buttons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 20vw;
+    min-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 10px solid yellowgreen;
+    padding-bottom: 20px;
+}
+
+.buttons__facebook:hover,
+.buttons__linkedin:hover,
+.buttons__git:hover {
+    opacity: 0.8;
+}
+
+.facebookpic,
+.gitpic,
+.linkedinpic {
+    width: 50px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        width: 60vw;
+    }
+}
